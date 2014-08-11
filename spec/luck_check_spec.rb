@@ -11,4 +11,8 @@ describe 'luck_check' do
     luck_check('12345').should (eq([1, 2, 4, 5]))
   end
 
+  it "should divide the array of numbers into 2 equal halves" do
+    luck_check('12345').should (eq([[1,2],[4,5]]))
+  end
+
 end
