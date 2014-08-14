@@ -11,8 +11,10 @@ describe 'luck_check' do
     expect(luck_check('12345')).to eq([1, 2, 4, 5])
   end
 
-  it "should divide the array of numbers into 2 equal halves" do
-    expect(luck_check('12345')).to eq([[1,2],[4,5]])
+  it "should return true if left half of numbers_array is equal to the right half of numbers_aray" do
+    expect(luck_check('12312')).to eq true
   end
+
+
 
 end
