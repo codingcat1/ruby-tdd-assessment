@@ -15,9 +15,11 @@ def luck_check(input)
 
   if left_half.inject(:+) == right_half.inject(:+)
     return true
+  elsif left_half.inject(:+) != right_half.inject(:+)
+    return false
   end
 
   numbers_array
 end
 
-p luck_check('12345')
+p luck_check('45372')
