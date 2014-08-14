@@ -11,4 +11,8 @@ describe 'luck_check' do
     expect(luck_check('12345')).to eq false
   end
 
+  it "should return 'not a valid entry' if anything other than an number is inputted" do
+    expect(luck_check('12butt')).to eq 'Not a valid entry'
+  end
+
 end
