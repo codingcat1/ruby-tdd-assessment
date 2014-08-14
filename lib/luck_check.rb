@@ -10,13 +10,14 @@ def luck_check(input)
   end
 
   halfpoint = numbers_length/2
-  left_half = numbers_array[0..(halfpoint-1)]
-  right_half = numbers_array[halfpoint..-1]
+  left_half = numbers_array[0..(halfpoint-1)].inject(:+)
+  right_half = numbers_array[halfpoint..-1].inject(:+)
 
-  if left_half.inject(:+) == right_half.inject(:+)
+  if left_half == right_half
     return true
-  elsif left_half.inject(:+) != right_half.inject(:+)
+  elsif left_half != right_half
     return false
+
   end
 
   numbers_array
